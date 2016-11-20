@@ -47,15 +47,17 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-394' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-e70232ea8dd8d082/out/query.rs.html#712-718' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-625' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/query.rs.html#890-898' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum Time {
-    Absolute(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>),
+    UTC(<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;),
+    Local(<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/offset/local/struct.Local.html' title='chrono::offset::local::Local'>Local</a>&gt;),
+    Nanoseconds(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>),
     Relative {
         value: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>,
         unit: <a class='enum' href='../../kairosdb/query/enum.TimeUnit.html' title='kairosdb::query::TimeUnit'>TimeUnit</a>,
     },
 }</pre><h2 class='variants'>Variants</h2>
-<span id='variant.Absolute' class='variant'><span id='Absolute.v' class='invisible'><code>Absolute(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>)</code></span></span><span id='variant.Relative' class='variant'><span id='Relative.v' class='invisible'><code>Relative</code></span></span><h3 class='fields'>Fields</h3>
+<span id='variant.UTC' class='variant'><span id='UTC.v' class='invisible'><code>UTC(<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/offset/utc/struct.UTC.html' title='chrono::offset::utc::UTC'>UTC</a>&gt;)</code></span></span><span id='variant.Local' class='variant'><span id='Local.v' class='invisible'><code>Local(<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/datetime/struct.DateTime.html' title='chrono::datetime::DateTime'>DateTime</a>&lt;<a class='struct' href='https://lifthrasiir.github.io/rust-chrono/chrono/offset/local/struct.Local.html' title='chrono::offset::local::Local'>Local</a>&gt;)</code></span></span><span id='variant.Nanoseconds' class='variant'><span id='Nanoseconds.v' class='invisible'><code>Nanoseconds(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>)</code></span></span><span id='variant.Relative' class='variant'><span id='Relative.v' class='invisible'><code>Relative</code></span></span><h3 class='fields'>Fields</h3>
 
                            <table><tr><td id='variant.Relative.field.value'><span id='Relative.v.value.v' class='invisible'><code>value:&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a></code></span></td><td></td></tr><tr><td id='variant.Relative.field.unit'><span id='Relative.v.unit.v' class='invisible'><code>unit:&nbsp;<a class='enum' href='../../kairosdb/query/enum.TimeUnit.html' title='kairosdb::query::TimeUnit'>TimeUnit</a></code></span></td><td></td></tr></table></section>
     <section id='search' class="content hidden"></section>
@@ -117,7 +119,7 @@
     </script>
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
-    <script src="../../extra.js"></script>
+    
     <script defer src="../../search-index.js"></script>
 </body>
 </html>

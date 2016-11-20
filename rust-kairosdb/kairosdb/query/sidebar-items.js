@@ -1,1 +1,1 @@
-initSidebarItems({"enum":[["Time",""],["TimeUnit",""]],"struct":[["Aggregator",""],["Metric",""],["Query",""],["RelativeTime",""],["Sampling",""]]});
+initSidebarItems({"enum":[["AggregatorType",""],["Time",""],["TimeUnit",""]],"struct":[["Aggregator",""],["Metric",""],["Query",""],["RelativeTime",""],["Sampling",""]]});

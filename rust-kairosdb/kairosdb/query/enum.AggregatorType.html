@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `Query` struct in crate `kairosdb`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, Query">
+    <meta name="description" content="API documentation for the Rust `AggregatorType` enum in crate `kairosdb`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AggregatorType">
 
-    <title>kairosdb::query::Query - Rust</title>
+    <title>kairosdb::query::AggregatorType - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
@@ -28,7 +28,7 @@
 
     <nav class="sidebar">
         
-        <p class='location'><a href='../index.html'>kairosdb</a>::<wbr><a href='index.html'>query</a></p><script>window.sidebarCurrent = {name: 'Query', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+        <p class='location'><a href='../index.html'>kairosdb</a>::<wbr><a href='index.html'>query</a></p><script>window.sidebarCurrent = {name: 'AggregatorType', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
     </nav>
 
     <nav class="sub">
@@ -42,16 +42,21 @@
         </form>
     </nav>
 
-    <section id='main' class="content struct">
-<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>kairosdb</a>::<wbr><a href='index.html'>query</a>::<wbr><a class='struct' href=''>Query</a></span><span class='out-of-band'><span id='render-detail'>
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>kairosdb</a>::<wbr><a href='index.html'>query</a>::<wbr><a class='enum' href=''>AggregatorType</a></span><span class='out-of-band'><span id='render-detail'>
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-503' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/query.rs.html#720-726' title='goto source code'>[src]</a></span></h1>
-<pre class='rust struct'>pub struct Query { /* fields omitted */ }</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-993' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/query.rs.html#1469-1500' title='goto source code'>[src]</a></span></h3>
-<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(start: <a class='enum' href='../../kairosdb/query/enum.Time.html' title='kairosdb::query::Time'>Time</a>, end: <a class='enum' href='../../kairosdb/query/enum.Time.html' title='kairosdb::query::Time'>Time</a>) -&gt; <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span></h4>
-<h4 id='method.add' class='method'><span id='add.v' class='invisible'><code>fn <a href='#method.add' class='fnname'>add</a>(&amp;mut self, metric: <a class='struct' href='../../kairosdb/query/struct.Metric.html' title='kairosdb::query::Metric'>Metric</a>)</code></span></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-509' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/query.rs.html#719' title='goto source code'>[src]</a></span></h3>
+               </span><a id='src-336' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/query.rs.html#412' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum AggregatorType {
+    AVG,
+    DEV,
+    COUNT,
+    FIRST,
+    GAPS,
+    HISTOGRAM,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.AVG' class='variant'><span id='AVG.v' class='invisible'><code>AVG</code></span></span><span id='variant.DEV' class='variant'><span id='DEV.v' class='invisible'><code>DEV</code></span></span><span id='variant.COUNT' class='variant'><span id='COUNT.v' class='invisible'><code>COUNT</code></span></span><span id='variant.FIRST' class='variant'><span id='FIRST.v' class='invisible'><code>FIRST</code></span></span><span id='variant.GAPS' class='variant'><span id='GAPS.v' class='invisible'><code>GAPS</code></span></span><span id='variant.HISTOGRAM' class='variant'><span id='HISTOGRAM.v' class='invisible'><code>HISTOGRAM</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../kairosdb/query/enum.AggregatorType.html' title='kairosdb::query::AggregatorType'>AggregatorType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-343' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/query.rs.html#411' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>

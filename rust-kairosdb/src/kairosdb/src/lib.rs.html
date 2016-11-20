@@ -42,30 +42,238 @@
         </form>
     </nav>
 
-    <section id='main' class="content source"><pre class="line-numbers"><span id="1"> 1</span>
-<span id="2"> 2</span>
-<span id="3"> 3</span>
-<span id="4"> 4</span>
-<span id="5"> 5</span>
-<span id="6"> 6</span>
-<span id="7"> 7</span>
-<span id="8"> 8</span>
-<span id="9"> 9</span>
-<span id="10">10</span>
-<span id="11">11</span>
-<span id="12">12</span>
-<span id="13">13</span>
-<span id="14">14</span>
-<span id="15">15</span>
-<span id="16">16</span>
-<span id="17">17</span>
+    <section id='main' class="content source"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
 </pre><pre class='rust '>
+<span class='comment'>/*
+ * Copyright 2016 Kai Strempel
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */</span>
+
+<span class='attribute'>#<span class='op'>!</span>[<span class='ident'>crate_type</span> <span class='op'>=</span> <span class='string'>&quot;lib&quot;</span>]</span>
+<span class='attribute'>#<span class='op'>!</span>[<span class='ident'>crate_name</span> <span class='op'>=</span> <span class='string'>&quot;kairosdb&quot;</span>]</span>
+
+<span class='doccomment'>//! A `Client` for KairosBD REST API</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! The Client itself is used as the central access point, from which</span>
+<span class='doccomment'>//! numerous operations are defined implementing each of the specific</span>
+<span class='doccomment'>//! KairosDB APIs.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//! use kairosdb::Client;</span>
+<span class='doccomment'>//! let client = Client::new(&quot;localhost&quot;, 8080);</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! A main job of a time series database is collecting and querying data.</span>
+<span class='doccomment'>//! To add data to KairosDB we have to create a `Datapoints` struct and add</span>
+<span class='doccomment'>//! the data to the object.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//! # fn main() {</span>
+<span class='doccomment'>//! # use kairosdb::Client;</span>
+<span class='doccomment'>//! use kairosdb::datapoints::Datapoints;</span>
+<span class='doccomment'>//! # let client = Client::new(&quot;localhost&quot;, 8080);</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let mut datapoints = Datapoints::new(&quot;myMetric&quot;, 0);</span>
+<span class='doccomment'>//! datapoints.add_ms(1000, 11.0);</span>
+<span class='doccomment'>//! datapoints.add_ms(2000, 12.0);</span>
+<span class='doccomment'>//! datapoints.add_ms(3000, 13.0);</span>
+<span class='doccomment'>//! datapoints.add_tag(&quot;test&quot;, &quot;first&quot;);</span>
+<span class='doccomment'>//! let result = client.add(&amp;datapoints);</span>
+<span class='doccomment'>//! assert!(result.is_ok());</span>
+<span class='doccomment'>//! # }</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! To query data we have to create a `Query` Object with the start and end</span>
+<span class='doccomment'>//! of the query. The start and the end can be a relative time. Check the</span>
+<span class='doccomment'>//! &#39;Time&#39; structure for more information.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//! # fn main() {</span>
+<span class='doccomment'>//! # use kairosdb::Client;</span>
+<span class='doccomment'>//! # let client = Client::new(&quot;localhost&quot;, 8080);</span>
+<span class='doccomment'>//! use std::collections::HashMap;</span>
+<span class='doccomment'>//! use kairosdb::query::{Query, Time, Metric, TimeUnit};</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let mut query = Query::new(</span>
+<span class='doccomment'>//!    Time::Nanoseconds(1000),</span>
+<span class='doccomment'>//!    Time::Nanoseconds(2000));</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let mut tags: HashMap&lt;String, Vec&lt;String&gt;&gt; = HashMap::new();</span>
+<span class='doccomment'>//! let metric = Metric::new(&quot;myMetric&quot;, tags, vec![]);</span>
+<span class='doccomment'>//! query.add(metric);</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let result = client.query(&amp;query).unwrap();</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! assert!(result.contains_key(&quot;myMetric&quot;));</span>
+<span class='doccomment'>//! assert_eq!(result[&quot;myMetric&quot;].len(), 2);</span>
+<span class='doccomment'>//! assert_eq!(result[&quot;myMetric&quot;][0].time, 1000);</span>
+<span class='doccomment'>//! assert_eq!(result[&quot;myMetric&quot;][0].value, 11.0);</span>
+<span class='doccomment'>//! assert_eq!(result[&quot;myMetric&quot;][1].time, 2000);</span>
+<span class='doccomment'>//! assert_eq!(result[&quot;myMetric&quot;][1].value, 12.0);</span>
+<span class='doccomment'>//! # }</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! Deleting data is like querying data.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//! # fn main() {</span>
+<span class='doccomment'>//! # use kairosdb::Client;</span>
+<span class='doccomment'>//! # let client = Client::new(&quot;localhost&quot;, 8080);</span>
+<span class='doccomment'>//! use std::collections::HashMap;</span>
+<span class='doccomment'>//! use kairosdb::query::{Query, Time, TimeUnit, Metric};</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let mut query = Query::new(</span>
+<span class='doccomment'>//!    Time::Nanoseconds(1000),</span>
+<span class='doccomment'>//!    Time::Nanoseconds(3000));</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let mut tags: HashMap&lt;String, Vec&lt;String&gt;&gt; = HashMap::new();</span>
+<span class='doccomment'>//! tags.insert(&quot;test&quot;.to_string(), vec![&quot;first&quot;.to_string()]);</span>
+<span class='doccomment'>//! let metric = Metric::new(&quot;myMetric&quot;, tags, vec![]);</span>
+<span class='doccomment'>//! query.add(metric);</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let result = client.delete(&amp;query);</span>
+<span class='doccomment'>//! assert!(result.is_ok());</span>
+<span class='doccomment'>//! # }</span>
+<span class='doccomment'>//! ```</span>
+
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>serde</span>;
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>serde_json</span>;
 <span class='attribute'>#[<span class='ident'>macro_use</span>]</span>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>log</span>;
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>env_logger</span>;
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>hyper</span>;
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>chrono</span>;
 
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>datapoints</span>;
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>query</span>;
@@ -138,7 +346,7 @@
     </script>
     <script src="../../../jquery.js"></script>
     <script src="../../../main.js"></script>
-    <script src="../../../extra.js"></script>
+    
     <script defer src="../../../search-index.js"></script>
 </body>
 </html>

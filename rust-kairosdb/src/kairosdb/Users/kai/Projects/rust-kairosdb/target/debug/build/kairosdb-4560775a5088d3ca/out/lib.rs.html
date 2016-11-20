@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-e70232ea8dd8d082/out/lib.rs`.">
+    <meta name="description" content="Source to the Rust file `/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-4560775a5088d3ca/out/lib.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>lib.rs.html -- source</title>
@@ -302,7 +302,82 @@
 <span id="258">258</span>
 <span id="259">259</span>
 <span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
 </pre><pre class='rust '>
+<span class='comment'>/*
+ * Copyright 2016 Kai Strempel
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */</span>
+
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::<span class='ident'>Read</span>;
 
 <span class='kw'>use</span> <span class='ident'>hyper</span>::<span class='ident'>header</span>::<span class='ident'>Connection</span>;
@@ -317,13 +392,10 @@
     {
         <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>serde</span> <span class='kw'>as</span> <span class='ident'>_serde</span>;
         <span class='attribute'>#[<span class='ident'>automatically_derived</span>]</span>
-        <span class='kw'>impl</span> 
-         <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Deserialize</span> <span class='kw'>for</span> <span class='ident'>Version</span> {
-            <span class='kw'>fn</span> <span class='ident'>deserialize</span><span class='op'>&lt;</span><span class='ident'>__D</span><span class='op'>&gt;</span>(<span class='ident'>deserializer</span>:
-                                    <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>__D</span>)
+        <span class='kw'>impl</span> <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Deserialize</span> <span class='kw'>for</span> <span class='ident'>Version</span> {
+            <span class='kw'>fn</span> <span class='ident'>deserialize</span><span class='op'>&lt;</span><span class='ident'>__D</span><span class='op'>&gt;</span>(<span class='ident'>deserializer</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>__D</span>)
              <span class='op'>-&gt;</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>Version</span>, <span class='ident'>__D</span>::<span class='ident'>Error</span><span class='op'>&gt;</span> <span class='kw'>where</span>
-             <span class='ident'>__D</span>: <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Deserializer</span> 
-             {
+             <span class='ident'>__D</span>: <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Deserializer</span> {
                 <span class='attribute'>#[<span class='ident'>allow</span>(<span class='ident'>non_camel_case_types</span>)]</span>
                 <span class='kw'>enum</span> <span class='ident'>__Field</span> { <span class='ident'>__field0</span>, <span class='ident'>__ignore</span>, }
                 <span class='kw'>impl</span> <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Deserialize</span> <span class='kw'>for</span> <span class='ident'>__Field</span> {
@@ -341,10 +413,16 @@
 
 
                                                     <span class='ident'>value</span>: <span class='ident'>usize</span>)
-                             <span class='op'>-&gt;</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>__Field</span>, <span class='ident'>__E</span><span class='op'>&gt;</span> <span class='kw'>where</span>
+                             <span class='op'>-&gt;</span>
+                                 ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>__Field</span>,
+                                                       <span class='ident'>__E</span><span class='op'>&gt;</span> <span class='kw'>where</span>
                              <span class='ident'>__E</span>: <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Error</span> {
                                 <span class='kw'>match</span> <span class='ident'>value</span> {
-                                    <span class='number'>0usize</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field0</span>) }
+                                    <span class='number'>0usize</span> <span class='op'>=&gt;</span> {
+                                        <span class='prelude-val'>Ok</span>(
+
+                                           <span class='ident'>__Field</span>::<span class='ident'>__field0</span>)
+                                    }
                                     _ <span class='op'>=&gt;</span> <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__ignore</span>),
                                 }
                             }
@@ -360,11 +438,11 @@
                              <span class='op'>-&gt;</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>__Field</span>, <span class='ident'>__E</span><span class='op'>&gt;</span> <span class='kw'>where</span>
                              <span class='ident'>__E</span>: <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Error</span> {
                                 <span class='kw'>match</span> <span class='ident'>value</span> {
-                                    <span class='string'>b&quot;version&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field0</span>) }
-                                    _ <span class='op'>=&gt;</span>
-                                    <span class='prelude-val'>Ok</span>(
-
-                                       <span class='ident'>__Field</span>::<span class='ident'>__ignore</span>),
+                                    <span class='string'>b&quot;version&quot;</span> <span class='op'>=&gt;</span>
+                                    {
+                                        <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field0</span>)
+                                    }
+                                    _ <span class='op'>=&gt;</span> <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__ignore</span>),
                                 }
                             }
                         }
@@ -372,7 +450,6 @@
                     }
                 }
                 <span class='kw'>struct</span> <span class='ident'>__Visitor</span>;
-
                 <span class='kw'>impl</span> <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Visitor</span> <span class='kw'>for</span> <span class='ident'>__Visitor</span> {
                     <span class='kw'>type</span>
                     <span class='ident'>Value</span>
@@ -391,10 +468,14 @@
                                 }
                             };
                         <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>visitor</span> . <span class='ident'>end</span> (  ));
-                        <span class='prelude-val'>Ok</span>(<span class='ident'>Version</span>{<span class='ident'>version</span>: <span class='ident'>__field0</span>,})
+                        <span class='prelude-val'>Ok</span>(
+
+                           <span class='ident'>Version</span>{<span class='ident'>version</span>: <span class='ident'>__field0</span>,})
                     }
                     <span class='attribute'>#[<span class='ident'>inline</span>]</span>
-                    <span class='kw'>fn</span> <span class='ident'>visit_map</span><span class='op'>&lt;</span><span class='ident'>__V</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>, <span class='kw-2'>mut</span> <span class='ident'>visitor</span>: <span class='ident'>__V</span>)
+                    <span class='kw'>fn</span> <span class='ident'>visit_map</span><span class='op'>&lt;</span><span class='ident'>__V</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>,
+                                      <span class='kw-2'>mut</span> <span class='ident'>visitor</span>:
+                                          <span class='ident'>__V</span>)
                      <span class='op'>-&gt;</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>Version</span>, <span class='ident'>__V</span>::<span class='ident'>Error</span><span class='op'>&gt;</span> <span class='kw'>where</span>
                      <span class='ident'>__V</span>: <span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>MapVisitor</span> {
                         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>__field0</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>String</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='prelude-val'>None</span>;
@@ -420,9 +501,7 @@
                         <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>visitor</span> . <span class='ident'>end</span> (  ));
                         <span class='kw'>let</span> <span class='ident'>__field0</span> <span class='op'>=</span>
                             <span class='kw'>match</span> <span class='ident'>__field0</span> {
-                                <span class='prelude-val'>Some</span>(
-
-                                     <span class='ident'>__field0</span>) <span class='op'>=&gt;</span> <span class='ident'>__field0</span>,
+                                <span class='prelude-val'>Some</span>(<span class='ident'>__field0</span>) <span class='op'>=&gt;</span> <span class='ident'>__field0</span>,
                                 <span class='prelude-val'>None</span> <span class='op'>=&gt;</span>
                                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>visitor</span> . <span class='ident'>missing_field</span> ( <span class='string'>&quot;version&quot;</span> )),
                             };
@@ -430,9 +509,7 @@
                     }
                 }
                 <span class='kw'>const</span> <span class='ident'>FIELDS</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;static</span> [<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;static</span> <span class='ident'>str</span>] <span class='op'>=</span> <span class='kw-2'>&amp;</span>[<span class='string'>&quot;version&quot;</span>];
-                <span class='ident'>deserializer</span>.<span class='ident'>deserialize_struct</span>(
-
-                                                <span class='string'>&quot;Version&quot;</span>, <span class='ident'>FIELDS</span>, <span class='ident'>__Visitor</span>)
+                <span class='ident'>deserializer</span>.<span class='ident'>deserialize_struct</span>(<span class='string'>&quot;Version&quot;</span>, <span class='ident'>FIELDS</span>, <span class='ident'>__Visitor</span>)
             }
         }
     };
@@ -495,7 +572,7 @@
         <span class='macro'>info</span><span class='macro'>!</span>(<span class='string'>&quot;get server version {:?}&quot;</span> , <span class='ident'>version</span> . <span class='ident'>version</span>);
         <span class='prelude-val'>Ok</span>(<span class='ident'>version</span>.<span class='ident'>version</span>)
     }
-    <span class='doccomment'>/// Remote method to add datapoints to the time series database</span>
+    <span class='doccomment'>/// Method to add datapoints to the time series database</span>
     <span class='doccomment'>///</span>
     <span class='doccomment'>/// # Example</span>
     <span class='doccomment'>/// ```</span>
@@ -504,8 +581,8 @@
     <span class='doccomment'>///</span>
     <span class='doccomment'>/// let client = Client::new(&quot;localhost&quot;, 8080);</span>
     <span class='doccomment'>/// let mut datapoints = Datapoints::new(&quot;first&quot;, 0);</span>
-    <span class='doccomment'>/// datapoints.add(1475513259000, 11);</span>
-    <span class='doccomment'>/// datapoints.add(1475513259001, 12);</span>
+    <span class='doccomment'>/// datapoints.add_ms(1475513259000, 11.0);</span>
+    <span class='doccomment'>/// datapoints.add_ms(1475513259001, 12.0);</span>
     <span class='doccomment'>/// datapoints.add_tag(&quot;test&quot;, &quot;first&quot;);</span>
     <span class='doccomment'>/// let result = client.add(&amp;datapoints);</span>
     <span class='doccomment'>/// assert!(result.is_ok())</span>
@@ -528,20 +605,60 @@
             }
         }
     }
+
+    <span class='doccomment'>/// Runs a query on the database.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// # Example</span>
+    <span class='doccomment'>/// ```</span>
+    <span class='doccomment'>/// use kairosdb::Client;</span>
+    <span class='doccomment'>/// use kairosdb::query::{Query, Time, TimeUnit};</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// let client = Client::new(&quot;localhost&quot;, 8080);</span>
+    <span class='doccomment'>/// let query = Query::new(</span>
+    <span class='doccomment'>///    Time::Nanoseconds(1),</span>
+    <span class='doccomment'>///    Time::Relative{value: 1, unit: TimeUnit::WEEKS});</span>
+    <span class='doccomment'>/// let result = client.query(&amp;query);</span>
+    <span class='doccomment'>/// assert!(result.is_ok())</span>
+    <span class='doccomment'>/// ```</span>
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>query</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>query</span>: <span class='kw-2'>&amp;</span><span class='ident'>Query</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>ResultMap</span>, <span class='ident'>KairoError</span><span class='op'>&gt;</span> {
-        <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>run_query</span>(<span class='ident'>query</span>) {
+        <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>run_query</span>(<span class='ident'>query</span>, <span class='string'>&quot;query&quot;</span>) {
             <span class='prelude-val'>Ok</span>(<span class='ident'>body</span>) <span class='op'>=&gt;</span> <span class='self'>self</span>.<span class='ident'>parse_query_result</span>(<span class='kw-2'>&amp;</span><span class='ident'>body</span>),
             <span class='prelude-val'>Err</span>(<span class='ident'>err</span>) <span class='op'>=&gt;</span> <span class='prelude-val'>Err</span>(<span class='ident'>err</span>),
         }
     }
-    <span class='kw'>fn</span> <span class='ident'>run_query</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>query</span>: <span class='kw-2'>&amp;</span><span class='ident'>Query</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>String</span>, <span class='ident'>KairoError</span><span class='op'>&gt;</span> {
+
+    <span class='doccomment'>/// Runs a delete query on the database. View the query structure</span>
+    <span class='doccomment'>/// to understand more about.</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// # Example</span>
+    <span class='doccomment'>/// ```</span>
+    <span class='doccomment'>/// use kairosdb::Client;</span>
+    <span class='doccomment'>/// use kairosdb::query::{Query, Time, TimeUnit};</span>
+    <span class='doccomment'>///</span>
+    <span class='doccomment'>/// let client = Client::new(&quot;localhost&quot;, 8080);</span>
+    <span class='doccomment'>/// let query = Query::new(</span>
+    <span class='doccomment'>///    Time::Nanoseconds(1),</span>
+    <span class='doccomment'>///    Time::Relative{value: 1, unit: TimeUnit::WEEKS});</span>
+    <span class='doccomment'>/// let result = client.delete(&amp;query);</span>
+    <span class='doccomment'>/// assert!(result.is_ok())</span>
+    <span class='doccomment'>/// ```</span>
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>delete</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>query</span>: <span class='kw-2'>&amp;</span><span class='ident'>Query</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span>(), <span class='ident'>KairoError</span><span class='op'>&gt;</span> {
+        <span class='kw'>match</span> <span class='self'>self</span>.<span class='ident'>run_query</span>(<span class='ident'>query</span>, <span class='string'>&quot;delete&quot;</span>) {
+            <span class='prelude-val'>Ok</span>(_) <span class='op'>=&gt;</span> <span class='prelude-val'>Ok</span>(()),
+            <span class='prelude-val'>Err</span>(<span class='ident'>err</span>) <span class='op'>=&gt;</span> <span class='prelude-val'>Err</span>(<span class='ident'>err</span>),
+        }
+    }
+
+    <span class='kw'>fn</span> <span class='ident'>run_query</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>query</span>: <span class='kw-2'>&amp;</span><span class='ident'>Query</span>, <span class='ident'>endpoint</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>)
+     <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>String</span>, <span class='ident'>KairoError</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='ident'>body</span> <span class='op'>=</span> <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>serde_json</span> :: <span class='ident'>to_string</span> ( <span class='ident'>query</span> ));
         <span class='macro'>info</span><span class='macro'>!</span>(<span class='string'>&quot;Run query {}&quot;</span> , <span class='ident'>body</span>);
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>response</span> <span class='op'>=</span>
             <span class='macro'>try</span><span class='macro'>!</span>(<span class='self'>self</span> . <span class='ident'>http_client</span> . <span class='ident'>post</span> (
-                 <span class='kw-2'>&amp;</span> <span class='ident'>format</span> <span class='op'>!</span> ( <span class='string'>&quot;{}/api/v1/datapoints/query&quot;</span> , <span class='self'>self</span> . <span class='ident'>base_url</span> )
-                 ) . <span class='ident'>header</span> ( <span class='ident'>Connection</span> :: <span class='ident'>close</span> (  ) ) . <span class='ident'>body</span> ( <span class='kw-2'>&amp;</span> <span class='ident'>body</span> ) .
-                 <span class='ident'>send</span> (  ));
+                 <span class='kw-2'>&amp;</span> <span class='ident'>format</span> <span class='op'>!</span> (
+                 <span class='string'>&quot;{}/api/v1/datapoints/{}&quot;</span> , <span class='self'>self</span> . <span class='ident'>base_url</span> , <span class='ident'>endpoint</span> ) ) .
+                 <span class='ident'>header</span> ( <span class='ident'>Connection</span> :: <span class='ident'>close</span> (  ) ) . <span class='ident'>body</span> ( <span class='kw-2'>&amp;</span> <span class='ident'>body</span> ) . <span class='ident'>send</span>
+                 (  ));
 
         <span class='kw'>match</span> <span class='ident'>response</span>.<span class='ident'>status</span> {
             <span class='ident'>StatusCode</span>::<span class='prelude-val'>Ok</span> <span class='op'>=&gt;</span> {
@@ -549,6 +666,7 @@
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>response</span> . <span class='ident'>read_to_string</span> ( <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>result_body</span> ));
                 <span class='prelude-val'>Ok</span>(<span class='ident'>result_body</span>)
             }
+            <span class='ident'>StatusCode</span>::<span class='ident'>NoContent</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='string'>&quot;&quot;</span>.<span class='ident'>to_string</span>()) }
             _ <span class='op'>=&gt;</span> {
                 <span class='prelude-val'>Err</span>(<span class='ident'>KairoError</span>::<span class='ident'>Kairo</span>(<span class='macro'>format</span><span class='macro'>!</span>(<span class='string'>&quot;Bad response code: {:?}&quot;</span> ,
                                               <span class='ident'>response</span> . <span class='ident'>status</span>)))
@@ -556,12 +674,12 @@
         }
     }
 
+
     <span class='kw'>fn</span> <span class='ident'>parse_query_result</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>body</span>: <span class='kw-2'>&amp;</span><span class='ident'>str</span>)
      <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>ResultMap</span>, <span class='ident'>KairoError</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='ident'>result</span> <span class='op'>=</span> <span class='ident'>QueryResult</span>::<span class='ident'>new</span>();
         <span class='ident'>result</span>.<span class='ident'>parse_result</span>(<span class='ident'>body</span>)
     }
-
 }
 </pre>
 </section>
@@ -624,7 +742,7 @@
     </script>
     <script src="../../../../../../../../../../../jquery.js"></script>
     <script src="../../../../../../../../../../../main.js"></script>
-    <script src="../../../../../../../../../../../extra.js"></script>
+    
     <script defer src="../../../../../../../../../../../search-index.js"></script>
 </body>
 </html>
