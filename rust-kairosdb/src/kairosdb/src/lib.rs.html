@@ -248,22 +248,38 @@
 <span id="204">204</span>
 <span id="205">205</span>
 <span id="206">206</span>
+<span id="207">207</span>
+<span id="208">208</span>
+<span id="209">209</span>
+<span id="210">210</span>
+<span id="211">211</span>
+<span id="212">212</span>
+<span id="213">213</span>
+<span id="214">214</span>
+<span id="215">215</span>
+<span id="216">216</span>
+<span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
 </pre><pre class='rust '>
-<span class='comment'>/*
- * Copyright 2016 Kai Strempel
- *
- * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */</span>
+<span class='comment'>// Copyright 2016 Kai Strempel</span>
+<span class='comment'>//</span>
+<span class='comment'>// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment'>// you may not use this file except in compliance with the License.</span>
+<span class='comment'>// You may obtain a copy of the License at</span>
+<span class='comment'>//</span>
+<span class='comment'>//     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment'>//</span>
+<span class='comment'>// Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment'>// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment'>// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment'>// See the License for the specific language governing permissions and</span>
+<span class='comment'>// limitations under the License.</span>
+<span class='comment'>//</span>
 
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>crate_type</span> <span class='op'>=</span> <span class='string'>&quot;lib&quot;</span>]</span>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>crate_name</span> <span class='op'>=</span> <span class='string'>&quot;kairosdb&quot;</span>]</span>
@@ -337,10 +353,11 @@
 <span class='doccomment'>//! ```</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! Optionally you can specify aggregators. Aggregators perform an operation on data</span>
-<span class='doccomment'>//! points and down samples. For example, you could sum all data points that exist in 5 minute periods.</span>
-<span class='doccomment'>//! Aggregators can be combined together. For example, you could sum all data points in 5 minute</span>
-<span class='doccomment'>//! periods then average them for a week period.</span>
-<span class='doccomment'>//! Aggregators are processed in the order they are specified in the vector for the metric constructor.</span>
+<span class='doccomment'>//! points and down samples. For example, you could sum all data points that exist in</span>
+<span class='doccomment'>//! 5 minute periods. Aggregators can be combined together. For example, you could</span>
+<span class='doccomment'>//! sum all data points in 5 minute periods then average them for a week period.</span>
+<span class='doccomment'>//! Aggregators are processed in the order they are specified in the vector for the</span>
+<span class='doccomment'>//! metric constructor.</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! ```</span>
 <span class='doccomment'>//! # fn main() {</span>
@@ -425,6 +442,23 @@
 <span class='doccomment'>//! assert!(result.unwrap().contains(&amp;&quot;myMetric&quot;.to_string()));</span>
 <span class='doccomment'>//! ```</span>
 <span class='doccomment'>//!</span>
+<span class='doccomment'>//! To get information about the current tags and tag values you</span>
+<span class='doccomment'>//! can use the tagsnames and tagvalues method.</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! ```</span>
+<span class='doccomment'>//! # use kairosdb::Client;</span>
+<span class='doccomment'>//! # let client = Client::new(&quot;localhost&quot;, 8080);</span>
+<span class='doccomment'>//! # use kairosdb::datapoints::Datapoints;</span>
+<span class='doccomment'>//! # let mut datapoints = Datapoints::new(&quot;myMetric&quot;, 0);</span>
+<span class='doccomment'>//! # datapoints.add_tag(&quot;test&quot;, &quot;first&quot;);</span>
+<span class='doccomment'>//! # let result = client.add(&amp;datapoints);</span>
+<span class='doccomment'>//! # assert!(result.is_ok());</span>
+<span class='doccomment'>//!</span>
+<span class='doccomment'>//! let tagnames = client.tagnames();</span>
+<span class='doccomment'>//! let tagvalues = client.tagvalues();</span>
+<span class='doccomment'>//! assert!(tagnames.unwrap().contains(&amp;&quot;test&quot;.to_string()));</span>
+<span class='doccomment'>//! assert!(tagvalues.unwrap().contains(&amp;&quot;first&quot;.to_string()));</span>
+<span class='doccomment'>//! ```</span>
 <span class='doccomment'>//! Delete a metric by name</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! ```</span>

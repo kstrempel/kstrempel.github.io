@@ -86,23 +86,21 @@
 <span id="42">42</span>
 <span id="43">43</span>
 <span id="44">44</span>
-<span id="45">45</span>
 </pre><pre class='rust '>
-<span class='comment'>/*
- * Copyright 2016 Kai Strempel
- *
- * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */</span>
+<span class='comment'>// Copyright 2016 Kai Strempel</span>
+<span class='comment'>//</span>
+<span class='comment'>// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class='comment'>// you may not use this file except in compliance with the License.</span>
+<span class='comment'>// You may obtain a copy of the License at</span>
+<span class='comment'>//</span>
+<span class='comment'>//     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class='comment'>//</span>
+<span class='comment'>// Unless required by applicable law or agreed to in writing, software</span>
+<span class='comment'>// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class='comment'>// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class='comment'>// See the License for the specific language governing permissions and</span>
+<span class='comment'>// limitations under the License.</span>
+<span class='comment'>//</span>
 
 <span class='kw'>use</span> <span class='ident'>hyper</span>;
 <span class='kw'>use</span> <span class='ident'>serde_json</span>;
@@ -117,7 +115,7 @@
 }
 
 <span class='kw'>impl</span> <span class='ident'>From</span><span class='op'>&lt;</span><span class='ident'>hyper</span>::<span class='ident'>error</span>::<span class='ident'>Error</span><span class='op'>&gt;</span> <span class='kw'>for</span> <span class='ident'>KairoError</span> {
-    <span class='kw'>fn</span> <span class='ident'>from</span>(<span class='ident'>err</span>: <span class='ident'>hyper</span>::<span class='ident'>error</span>::<span class='ident'>Error</span>) <span class='op'>-&gt;</span> <span class='ident'>KairoError</span>{
+    <span class='kw'>fn</span> <span class='ident'>from</span>(<span class='ident'>err</span>: <span class='ident'>hyper</span>::<span class='ident'>error</span>::<span class='ident'>Error</span>) <span class='op'>-&gt;</span> <span class='ident'>KairoError</span> {
         <span class='ident'>KairoError</span>::<span class='ident'>Http</span>(<span class='ident'>err</span>)
     }
 }
