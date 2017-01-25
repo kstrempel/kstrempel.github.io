@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["datapoints",""],["query",""],["result",""]],"struct":[["Client",""]]});
+initSidebarItems({"mod":[["datapoints","Creates new datapoints"],["query","Several structs to create and parse queries"],["result",""]],"struct":[["Client","The core of the kairosdb client, owns a HTTP connection."]]});

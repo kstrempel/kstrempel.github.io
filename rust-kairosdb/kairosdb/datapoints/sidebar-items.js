@@ -1,1 +1,1 @@
-initSidebarItems({"struct":[["Datapoints",""]]});
+initSidebarItems({"struct":[["Datapoints","Struct to define everything for a datapoint"]]});

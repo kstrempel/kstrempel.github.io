@@ -9,6 +9,7 @@
 
     <title>kairosdb::query::Query - Rust</title>
 
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
     <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../main.css">
     
@@ -47,11 +48,19 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-504' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-55b1082bc02ea240/out/query.rs.html#742-748' title='goto source code'>[src]</a></span></h1>
-<pre class='rust struct'>pub struct Query { /* fields omitted */ }</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-974' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-55b1082bc02ea240/out/query.rs.html#1450-1483' title='goto source code'>[src]</a></span></h3>
+               </span><a class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-938fb06541bb4daf/out/query.rs.html#746-752' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Query { /* fields omitted */ }</pre><div class='docblock'><p>JSON representation of a kairosdb query</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-938fb06541bb4daf/out/query.rs.html#1459-1502' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(start: <a class='enum' href='../../kairosdb/query/enum.Time.html' title='kairosdb::query::Time'>Time</a>, end: <a class='enum' href='../../kairosdb/query/enum.Time.html' title='kairosdb::query::Time'>Time</a>) -&gt; <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span></h4>
-<h4 id='method.add' class='method'><span id='add.v' class='invisible'><code>fn <a href='#method.add' class='fnname'>add</a>(&amp;mut self, metric: <a class='struct' href='../../kairosdb/query/struct.Metric.html' title='kairosdb::query::Metric'>Metric</a>)</code></span></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-510' class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-55b1082bc02ea240/out/query.rs.html#741' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Creates a new <code>Query</code> object. With a absolute or relative
+start and end time.</p>
+
+<p>The following example creates a query starting from the
+first nanosecond in our world until the first week in our world
+finished.
+<code>let query = Query::new(Time::Nanoseconds(1), Time::Relative{value: 1, unit: TimeUnit::WEEKS});</code></p>
+</div><h4 id='method.add' class='method'><span id='add.v' class='invisible'><code>fn <a href='#method.add' class='fnname'>add</a>(&amp;mut self, metric: <a class='struct' href='../../kairosdb/query/struct.Metric.html' title='kairosdb::query::Metric'>Metric</a>)</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../kairosdb/query/struct.Query.html' title='kairosdb::query::Query'>Query</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/kairosdb/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-938fb06541bb4daf/out/query.rs.html#745' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>
@@ -110,11 +119,9 @@
     <script>
         window.rootPath = "../../";
         window.currentCrate = "kairosdb";
-        window.playgroundUrl = "";
     </script>
     <script src="../../jquery.js"></script>
     <script src="../../main.js"></script>
-    
     <script defer src="../../search-index.js"></script>
 </body>
 </html>

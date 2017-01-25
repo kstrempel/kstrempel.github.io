@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-55b1082bc02ea240/out/result.rs`.">
+    <meta name="description" content="Source to the Rust file `/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-938fb06541bb4daf/out/result.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>result.rs.html -- source</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../normalize.css">
     <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../main.css">
     
@@ -691,7 +692,7 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;QueryResult&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;queries&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>queries</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;queries&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>queries</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }
@@ -856,10 +857,10 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> ( <span class='string'>&quot;Query&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span>
                          ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;sample_size&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> .
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;sample_size&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> .
                      <span class='ident'>sample_size</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;results&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>results</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;results&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>results</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }
@@ -1022,9 +1023,9 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;ResultValues&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;name&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>name</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;name&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>name</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;values&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>values</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;values&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>values</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }

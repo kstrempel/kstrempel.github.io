@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-55b1082bc02ea240/out/query.rs`.">
+    <meta name="description" content="Source to the Rust file `/Users/kai/Projects/rust-kairosdb/target/debug/build/kairosdb-938fb06541bb4daf/out/query.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>query.rs.html -- source</title>
 
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../normalize.css">
     <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../main.css">
     
@@ -1563,10 +1564,8 @@
 <span id="1519">1519</span>
 <span id="1520">1520</span>
 <span id="1521">1521</span>
-<span id="1522">1522</span>
-<span id="1523">1523</span>
 </pre><pre class='rust '>
-<span class='comment'>// Copyright 2016 Kai Strempel</span>
+<span class='comment'>// Copyright 2016-2017 Kai Strempel</span>
 <span class='comment'>//</span>
 <span class='comment'>// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
 <span class='comment'>// you may not use this file except in compliance with the License.</span>
@@ -1632,9 +1631,10 @@
                                     <span class='number'>3usize</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field3</span>) }
                                     <span class='number'>4usize</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field4</span>) }
                                     <span class='number'>5usize</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field5</span>) }
-                                    <span class='number'>6usize</span> <span class='op'>=&gt;</span>
-                                    {
-                                        <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field6</span>)
+                                    <span class='number'>6usize</span> <span class='op'>=&gt;</span> {
+                                        <span class='prelude-val'>Ok</span>(
+
+                                           <span class='ident'>__Field</span>::<span class='ident'>__field6</span>)
                                     }
                                     <span class='number'>7usize</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field7</span>) }
                                     _ <span class='op'>=&gt;</span>
@@ -1655,17 +1655,15 @@
 
                                            <span class='ident'>__Field</span>::<span class='ident'>__field3</span>)
                                     }
-                                    <span class='string'>&quot;DAYS&quot;</span> <span class='op'>=&gt;</span>
-                                    {
+                                    <span class='string'>&quot;DAYS&quot;</span> <span class='op'>=&gt;</span> {
+
                                         <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field4</span>)
                                     }
                                     <span class='string'>&quot;WEEKS&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field5</span>) }
                                     <span class='string'>&quot;MONTHS&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field6</span>) }
-                                    <span class='string'>&quot;YEARS&quot;</span> <span class='op'>=&gt;</span> {
-                                        <span class='prelude-val'>Ok</span>(
+                                    <span class='string'>&quot;YEARS&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field7</span>) }
 
-                                           <span class='ident'>__Field</span>::<span class='ident'>__field7</span>)
-                                    }
+
                                     _ <span class='op'>=&gt;</span>
                                     <span class='prelude-val'>Err</span>(<span class='ident'>_serde</span>::<span class='ident'>de</span>::<span class='ident'>Error</span>::<span class='ident'>unknown_variant</span>(<span class='ident'>value</span>)),
                                 }
@@ -1687,9 +1685,8 @@
                                     <span class='string'>b&quot;DAYS&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field4</span>) }
                                     <span class='string'>b&quot;WEEKS&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field5</span>) }
                                     <span class='string'>b&quot;MONTHS&quot;</span> <span class='op'>=&gt;</span> { <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field6</span>) }
-
-
-                                    <span class='string'>b&quot;YEARS&quot;</span> <span class='op'>=&gt;</span> {
+                                    <span class='string'>b&quot;YEARS&quot;</span> <span class='op'>=&gt;</span>
+                                    {
                                         <span class='prelude-val'>Ok</span>(<span class='ident'>__Field</span>::<span class='ident'>__field7</span>)
                                     }
                                     _ <span class='op'>=&gt;</span> {
@@ -1769,7 +1766,7 @@
             <span class='kw'>fn</span> <span class='ident'>serialize</span><span class='op'>&lt;</span><span class='ident'>__S</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>_serializer</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>__S</span>)
              <span class='op'>-&gt;</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span>(), <span class='ident'>__S</span>::<span class='ident'>Error</span><span class='op'>&gt;</span> <span class='kw'>where</span>
              <span class='ident'>__S</span>: <span class='ident'>_serde</span>::<span class='ident'>ser</span>::<span class='ident'>Serializer</span> {
-                <span class='kw'>match</span> <span class='op'>*</span><span class='self'>self</span> {
+                <span class='kw'>match</span> <span class='kw-2'>*</span><span class='self'>self</span> {
                     <span class='ident'>TimeUnit</span>::<span class='ident'>MILLISECONDS</span> <span class='op'>=&gt;</span>
                     <span class='ident'>_serde</span>::<span class='ident'>ser</span>::<span class='ident'>Serializer</span>::<span class='ident'>serialize_unit_variant</span>(<span class='ident'>_serializer</span>,
                                                                     <span class='string'>&quot;TimeUnit&quot;</span>,
@@ -1961,7 +1958,7 @@
             <span class='kw'>fn</span> <span class='ident'>serialize</span><span class='op'>&lt;</span><span class='ident'>__S</span><span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>_serializer</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>__S</span>)
              <span class='op'>-&gt;</span> ::<span class='ident'>std</span>::<span class='ident'>result</span>::<span class='prelude-ty'>Result</span><span class='op'>&lt;</span>(), <span class='ident'>__S</span>::<span class='ident'>Error</span><span class='op'>&gt;</span> <span class='kw'>where</span>
              <span class='ident'>__S</span>: <span class='ident'>_serde</span>::<span class='ident'>ser</span>::<span class='ident'>Serializer</span> {
-                <span class='kw'>match</span> <span class='op'>*</span><span class='self'>self</span> {
+                <span class='kw'>match</span> <span class='kw-2'>*</span><span class='self'>self</span> {
                     <span class='ident'>AggregatorType</span>::<span class='ident'>AVG</span> <span class='op'>=&gt;</span>
                     <span class='ident'>_serde</span>::<span class='ident'>ser</span>::<span class='ident'>Serializer</span>::<span class='ident'>serialize_unit_variant</span>(<span class='ident'>_serializer</span>,
                                                                     <span class='string'>&quot;AggregatorType&quot;</span>,
@@ -2279,34 +2276,34 @@
                 <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> <span class='op'>=</span>
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;Query&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='kw'>if</span> <span class='prelude-ty'>Option</span> :: <span class='ident'>is_none</span> (
-                         <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>start_absolute</span> ) { <span class='number'>0</span> } <span class='kw'>else</span> { <span class='number'>1</span> } <span class='op'>+</span> <span class='kw'>if</span>
-                         <span class='prelude-ty'>Option</span> :: <span class='ident'>is_none</span> ( <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>end_absolute</span> ) { <span class='number'>0</span> }
+                         <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>start_absolute</span> ) { <span class='number'>0</span> } <span class='kw'>else</span> { <span class='number'>1</span> } <span class='op'>+</span> <span class='kw'>if</span>
+                         <span class='prelude-ty'>Option</span> :: <span class='ident'>is_none</span> ( <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>end_absolute</span> ) { <span class='number'>0</span> }
                          <span class='kw'>else</span> { <span class='number'>1</span> } <span class='op'>+</span> <span class='kw'>if</span> <span class='prelude-ty'>Option</span> :: <span class='ident'>is_none</span> (
-                         <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>end_relative</span> ) { <span class='number'>0</span> } <span class='kw'>else</span> { <span class='number'>1</span> } <span class='op'>+</span> <span class='kw'>if</span> <span class='prelude-ty'>Option</span>
-                         :: <span class='ident'>is_none</span> ( <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>start_relative</span> ) { <span class='number'>0</span> } <span class='kw'>else</span> { <span class='number'>1</span>
+                         <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>end_relative</span> ) { <span class='number'>0</span> } <span class='kw'>else</span> { <span class='number'>1</span> } <span class='op'>+</span> <span class='kw'>if</span> <span class='prelude-ty'>Option</span>
+                         :: <span class='ident'>is_none</span> ( <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>start_relative</span> ) { <span class='number'>0</span> } <span class='kw'>else</span> { <span class='number'>1</span>
                          } <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='kw'>if</span> <span class='op'>!</span><span class='prelude-ty'>Option</span>::<span class='ident'>is_none</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>start_absolute</span>) {
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                         <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;start_absolute&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> .
+                         <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;start_absolute&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> .
                          <span class='ident'>start_absolute</span> ));
                 }
                 <span class='kw'>if</span> <span class='op'>!</span><span class='prelude-ty'>Option</span>::<span class='ident'>is_none</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>end_absolute</span>) {
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                         <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;end_absolute&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> .
+                         <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;end_absolute&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> .
                          <span class='ident'>end_absolute</span> ));
                 }
                 <span class='kw'>if</span> <span class='op'>!</span><span class='prelude-ty'>Option</span>::<span class='ident'>is_none</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>end_relative</span>) {
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                         <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;end_relative&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> .
+                         <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;end_relative&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> .
                          <span class='ident'>end_relative</span> ));
                 }
                 <span class='kw'>if</span> <span class='op'>!</span><span class='prelude-ty'>Option</span>::<span class='ident'>is_none</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>start_relative</span>) {
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                         <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;start_relative&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> .
+                         <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;start_relative&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> .
                          <span class='ident'>start_relative</span> ));
                 }
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;metrics&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>metrics</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;metrics&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>metrics</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }
@@ -2471,9 +2468,9 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;RelativeTime&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;value&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>value</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;value&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>value</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;unit&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>unit</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;unit&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>unit</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }
@@ -2680,11 +2677,11 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;Metric&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;tags&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>tags</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;tags&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>tags</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;name&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>name</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;name&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>name</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;aggregators&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> .
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;aggregators&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> .
                      <span class='ident'>aggregators</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
@@ -2850,9 +2847,9 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;Aggregator&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;name&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>name</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;name&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>name</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;sampling&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>sampling</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;sampling&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>sampling</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }
@@ -3013,9 +3010,9 @@
                     <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct</span> (
                          <span class='string'>&quot;Sampling&quot;</span> , <span class='number'>0</span> <span class='op'>+</span> <span class='number'>1</span> <span class='op'>+</span> <span class='number'>1</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;value&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>value</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;value&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>value</span> ));
                 <span class='macro'>try</span><span class='macro'>!</span>(<span class='ident'>_serializer</span> . <span class='ident'>serialize_struct_elt</span> (
-                     <span class='kw-2'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;unit&quot;</span> , <span class='kw-2'>&amp;</span> <span class='self'>self</span> . <span class='ident'>unit</span> ));
+                     <span class='op'>&amp;</span> <span class='kw-2'>mut</span> <span class='ident'>__serde_state</span> , <span class='string'>&quot;unit&quot;</span> , <span class='op'>&amp;</span> <span class='self'>self</span> . <span class='ident'>unit</span> ));
                 <span class='ident'>_serializer</span>.<span class='ident'>serialize_struct_end</span>(<span class='ident'>__serde_state</span>)
             }
         }
